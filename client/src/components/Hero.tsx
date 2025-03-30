@@ -81,7 +81,7 @@ export default function Hero() {
           >
             <div className="rounded-full w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-[#9d4edd]/30 to-black border-4 border-[#9d4edd] shadow-xl shadow-purple-500/20 flex items-center justify-center overflow-hidden">
               <img 
-                src="/attached_assets/Senior Picture Isaias Perez.JPG" 
+                src="/assets/Senior Picture Isaias Perez.JPG" 
                 alt="Isaias Perez" 
                 className="w-full h-full object-cover" 
               />
