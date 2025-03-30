@@ -8,7 +8,7 @@ export default function About() {
   const handleDownload = () => {
     // Create a link element
     const link = document.createElement("a");
-    link.href = "/attached_assets/Technical_Resume_Isaias_Perez_2025.pdf";
+    link.href = "/assets/Technical_Resume_Isaias_Perez_2025.pdf";
     link.download = "Technical_Resume_Isaias_Perez_2025.pdf";
     document.body.appendChild(link);
     link.click();
