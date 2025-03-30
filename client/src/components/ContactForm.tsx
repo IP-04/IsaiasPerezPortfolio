@@ -58,7 +58,9 @@ export default function ContactForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="bg-white p-8 rounded-lg shadow-lg text-[#2C3E50]">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="bg-black/40 backdrop-blur-sm border border-purple-900/50 p-8 rounded-lg shadow-lg shadow-purple-500/10 text-white">
+        <h3 className="text-2xl font-semibold mb-6 font-inter">Send a Message</h3>
+        
         <FormField
           control={form.control}
           name="name"
@@ -66,7 +68,11 @@ export default function ContactForm() {
             <FormItem className="mb-6">
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Your Name" {...field} className="focus:ring-[#3498DB]" />
+                <Input 
+                  placeholder="Your Name" 
+                  {...field} 
+                  className="border-purple-900/50 bg-black/80 text-white focus:border-[#9d4edd] focus:ring focus:ring-[#9d4edd]/20" 
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -80,7 +86,11 @@ export default function ContactForm() {
             <FormItem className="mb-6">
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="Your Email" {...field} className="focus:ring-[#3498DB]" />
+                <Input 
+                  placeholder="Your Email" 
+                  {...field} 
+                  className="border-purple-900/50 bg-black/80 text-white focus:border-[#9d4edd] focus:ring focus:ring-[#9d4edd]/20" 
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -94,7 +104,11 @@ export default function ContactForm() {
             <FormItem className="mb-6">
               <FormLabel>Subject</FormLabel>
               <FormControl>
-                <Input placeholder="Subject" {...field} className="focus:ring-[#3498DB]" />
+                <Input 
+                  placeholder="Subject" 
+                  {...field} 
+                  className="border-purple-900/50 bg-black/80 text-white focus:border-[#9d4edd] focus:ring focus:ring-[#9d4edd]/20" 
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -111,7 +125,7 @@ export default function ContactForm() {
                 <Textarea 
                   placeholder="Your Message" 
                   {...field} 
-                  className="focus:ring-[#3498DB]" 
+                  className="border-purple-900/50 bg-black/80 text-white focus:border-[#9d4edd] focus:ring focus:ring-[#9d4edd]/20 resize-none" 
                   rows={4} 
                 />
               </FormControl>
@@ -122,7 +136,7 @@ export default function ContactForm() {
 
         <Button 
           type="submit" 
-          className="w-full bg-[#3498DB] hover:bg-[#3498DB]/90 text-white"
+          className="w-full bg-[#9d4edd] hover:bg-[#9d4edd]/80 text-white shadow-md shadow-purple-500/20"
           disabled={isPending}
         >
           {isPending ? (

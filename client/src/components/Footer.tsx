@@ -14,12 +14,13 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#2D3E50] text-white py-8 border-t border-white/10">
-      <div className="container mx-auto px-6">
+    <footer className="bg-black text-white py-8 border-t border-purple-900/30">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/10 via-black to-black z-0"></div>
+      <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <h2 className="text-2xl font-bold font-inter">
-              Isaias<span className="text-[#3498DB]">.dev</span>
+              Isaias<span className="text-[#9d4edd]">.dev</span>
             </h2>
             <p className="text-gray-400 mt-2">
               Computer Science Student & ML Researcher
@@ -31,7 +32,7 @@ export default function Footer() {
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className="text-gray-400 hover:text-white transition-colors py-1"
+                className="text-gray-400 hover:text-[#9d4edd] transition-colors py-1"
                 onClick={(e) => {
                   e.preventDefault();
                   if (item.id === "home") {
@@ -47,7 +48,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-purple-900/30 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
             &copy; {currentYear} Isaias Perez. All rights reserved.
           </p>
@@ -56,7 +57,7 @@ export default function Footer() {
               href="https://linkedin.com/in/isaias-perez21"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-400 hover:text-[#9d4edd] transition-colors"
             >
               <FaLinkedinIn />
             </a>
@@ -64,13 +65,13 @@ export default function Footer() {
               href="https://github.com/IP-04"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-400 hover:text-[#9d4edd] transition-colors"
             >
               <FaGithub />
             </a>
             <a
               href="mailto:isaiasxl21@gmail.com"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-400 hover:text-[#9d4edd] transition-colors"
             >
               <FaEnvelope />
             </a>

@@ -15,8 +15,9 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-20 bg-white scroll-mt-20">
-      <div className="container mx-auto px-6">
+    <section id="about" className="py-20 bg-black text-white scroll-mt-20">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/5 via-black to-black z-0"></div>
+      <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row items-center">
           <motion.div 
             className="md:w-2/5 mb-10 md:mb-0"
@@ -25,7 +26,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="rounded-lg shadow-lg w-full max-w-md mx-auto bg-gradient-to-br from-[#2D3E50] to-[#3498DB] h-[400px] flex items-center justify-center">
+            <div className="rounded-lg shadow-lg shadow-purple-500/20 w-full max-w-md mx-auto bg-gradient-to-br from-[#9d4edd]/50 to-black border border-purple-900/50 h-[400px] flex items-center justify-center">
               <div className="text-white text-8xl font-bold">IP</div>
             </div>
           </motion.div>
@@ -37,68 +38,68 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold mb-6 text-[#2D3E50] font-inter">About Me</h2>
+            <h2 className="text-3xl font-bold mb-6 text-white font-inter">About Me</h2>
             
-            <div className="bg-[#3498DB]/10 p-4 rounded-md mb-8">
+            <div className="bg-[#9d4edd]/10 border border-purple-900/50 p-4 rounded-md mb-8">
               <div className="flex items-center mb-2">
-                <FaGraduationCap className="text-[#3498DB] mr-3 text-xl" />
-                <h3 className="text-xl font-semibold font-inter">Education</h3>
+                <FaGraduationCap className="text-[#9d4edd] mr-3 text-xl" />
+                <h3 className="text-xl font-semibold font-inter text-white">Education</h3>
               </div>
               <div className="ml-9">
-                <p className="font-medium">University of Colorado Boulder</p>
-                <p>BS in Computer Science (Expected May 2027)</p>
-                <p className="text-sm text-gray-600">Double Minor: Business and Applied Mathematics</p>
+                <p className="font-medium text-white">University of Colorado Boulder</p>
+                <p className="text-gray-300">BS in Computer Science (Expected May 2027)</p>
+                <p className="text-sm text-gray-400">Double Minor: Business and Applied Mathematics</p>
               </div>
             </div>
             
-            <p className="mb-6 text-lg">
+            <p className="mb-6 text-lg text-gray-300">
               I'm a passionate Computer Science student with a focus on machine learning and software engineering. Currently researching LLM interpretability at CU Boulder, I'm dedicated to developing innovative technological solutions.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-[#F5F7FA] rounded-lg p-4 shadow-sm">
+              <div className="bg-black rounded-lg p-4 shadow-md shadow-purple-500/10 border border-purple-900/50">
                 <div className="flex items-center mb-2">
-                  <FaCode className="text-[#3498DB] mr-2" />
-                  <h4 className="font-semibold">Software Development</h4>
+                  <FaCode className="text-[#9d4edd] mr-2" />
+                  <h4 className="font-semibold text-white">Software Development</h4>
                 </div>
-                <p>Full-stack development with experience in React, Node.js, and various databases.</p>
+                <p className="text-gray-300">Full-stack development with experience in React, Node.js, and various databases.</p>
               </div>
               
-              <div className="bg-[#F5F7FA] rounded-lg p-4 shadow-sm">
+              <div className="bg-black rounded-lg p-4 shadow-md shadow-purple-500/10 border border-purple-900/50">
                 <div className="flex items-center mb-2">
-                  <FaBrain className="text-[#3498DB] mr-2" />
-                  <h4 className="font-semibold">Machine Learning</h4>
+                  <FaBrain className="text-[#9d4edd] mr-2" />
+                  <h4 className="font-semibold text-white">Machine Learning</h4>
                 </div>
-                <p>Experienced with TensorFlow, PyTorch, and research in LLM interpretability.</p>
+                <p className="text-gray-300">Experienced with TensorFlow, PyTorch, and research in LLM interpretability.</p>
               </div>
               
-              <div className="bg-[#F5F7FA] rounded-lg p-4 shadow-sm">
+              <div className="bg-black rounded-lg p-4 shadow-md shadow-purple-500/10 border border-purple-900/50">
                 <div className="flex items-center mb-2">
-                  <FaLanguage className="text-[#3498DB] mr-2" />
-                  <h4 className="font-semibold">Bilingual</h4>
+                  <FaLanguage className="text-[#9d4edd] mr-2" />
+                  <h4 className="font-semibold text-white">Bilingual</h4>
                 </div>
-                <p>Native Spanish speaker, fluent in English, with excellent cross-cultural communication skills.</p>
+                <p className="text-gray-300">Native Spanish speaker, fluent in English, with excellent cross-cultural communication skills.</p>
               </div>
               
-              <div className="bg-[#F5F7FA] rounded-lg p-4 shadow-sm">
+              <div className="bg-black rounded-lg p-4 shadow-md shadow-purple-500/10 border border-purple-900/50">
                 <div className="flex items-center mb-2">
-                  <FaUsers className="text-[#3498DB] mr-2" />
-                  <h4 className="font-semibold">Leadership</h4>
+                  <FaUsers className="text-[#9d4edd] mr-2" />
+                  <h4 className="font-semibold text-white">Leadership</h4>
                 </div>
-                <p>Active member of SHPE, promoting diversity and engagement within the engineering community.</p>
+                <p className="text-gray-300">Active member of SHPE, promoting diversity and engagement within the engineering community.</p>
               </div>
             </div>
             
             <div className="flex flex-wrap">
               <Button 
-                className="bg-[#2D3E50] hover:bg-[#2D3E50]/90 text-white mr-4 mb-4"
+                className="bg-[#9d4edd] hover:bg-[#9d4edd]/80 text-white mr-4 mb-4"
                 onClick={() => scrollToSection("contact")}
               >
                 Get in Touch
               </Button>
               <Button 
                 variant="outline" 
-                className="border-[#2D3E50] text-[#2D3E50] hover:bg-[#2D3E50] hover:text-white mb-4"
+                className="border-[#9d4edd] text-[#9d4edd] hover:bg-[#9d4edd]/20 mb-4"
                 onClick={handleDownload}
               >
                 Download Resume

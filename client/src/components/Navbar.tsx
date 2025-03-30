@@ -52,7 +52,7 @@ export default function Navbar() {
     <nav
       className={`fixed w-full z-10 py-4 transition-all duration-300 ${
         scrolled
-          ? "bg-white/90 shadow-sm backdrop-blur-md"
+          ? "bg-black/80 shadow-md shadow-purple-500/10 backdrop-blur-md"
           : "bg-transparent"
       }`}
     >
@@ -65,8 +65,8 @@ export default function Navbar() {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
-          <span className="text-[#2D3E50]">Isaias</span>
-          <span className="text-[#3498DB]">.dev</span>
+          <span className="text-white">Isaias</span>
+          <span className="text-[#9d4edd]">.dev</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -75,7 +75,7 @@ export default function Navbar() {
             <a
               key={item.id}
               href={`#${item.id}`}
-              className="text-[#2C3E50] hover:text-[#3498DB] transition-colors font-medium"
+              className="text-gray-300 hover:text-[#9d4edd] transition-colors font-medium"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick(item.id);
@@ -86,7 +86,7 @@ export default function Navbar() {
           ))}
           <Button
             onClick={handleDownload}
-            className="bg-[#3498DB] text-white hover:bg-[#3498DB]/90"
+            className="bg-[#9d4edd] text-white hover:bg-[#9d4edd]/80"
           >
             Resume
           </Button>
@@ -95,7 +95,7 @@ export default function Navbar() {
         {/* Mobile Navigation Toggle */}
         <Button
           variant="ghost"
-          className="md:hidden text-[#2C3E50]"
+          className="md:hidden text-white hover:bg-purple-900/20"
           onClick={toggleMenu}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -104,13 +104,13 @@ export default function Navbar() {
 
       {/* Mobile Navigation Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white w-full absolute top-full left-0 shadow-md">
+        <div className="md:hidden bg-black/90 backdrop-blur-md w-full absolute top-full left-0 shadow-md shadow-purple-500/10 border-t border-purple-900/30">
           <div className="container mx-auto px-6 py-4 flex flex-col space-y-4">
             {navItems.map((item) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className="text-[#2C3E50] py-2 border-b border-gray-100"
+                className="text-gray-300 py-2 border-b border-purple-900/30 hover:text-[#9d4edd]"
                 onClick={(e) => {
                   e.preventDefault();
                   handleNavClick(item.id);
@@ -121,7 +121,7 @@ export default function Navbar() {
             ))}
             <Button
               onClick={handleDownload}
-              className="bg-[#3498DB] text-white hover:bg-[#3498DB]/90 w-full"
+              className="bg-[#9d4edd] text-white hover:bg-[#9d4edd]/80 w-full"
             >
               Resume
             </Button>

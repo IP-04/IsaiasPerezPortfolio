@@ -15,8 +15,9 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-[#2D3E50] text-white scroll-mt-20">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-20 bg-black text-white scroll-mt-20 relative">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-black to-black z-0"></div>
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,12 +48,12 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <div className="bg-white/10 p-8 rounded-lg h-full">
+            <div className="bg-black/40 backdrop-blur-sm border border-purple-900/50 shadow-lg shadow-purple-500/10 p-8 rounded-lg h-full">
               <h3 className="text-2xl font-semibold mb-6 font-inter">Contact Information</h3>
 
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="bg-[#3498DB] rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="bg-[#9d4edd] rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">
                     <FaEnvelope />
                   </div>
                   <div>
@@ -67,7 +68,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="bg-[#3498DB] rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="bg-[#9d4edd] rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">
                     <FaMapMarkerAlt />
                   </div>
                   <div>
@@ -77,7 +78,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="bg-[#3498DB] rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="bg-[#9d4edd] rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">
                     <FaLanguage />
                   </div>
                   <div>
@@ -94,7 +95,7 @@ export default function Contact() {
                     href="https://linkedin.com/in/isaias-perez21"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white text-[#2D3E50] hover:bg-[#3498DB] hover:text-white transition-colors w-12 h-12 rounded-full flex items-center justify-center"
+                    className="bg-gradient-to-br from-[#9d4edd] to-purple-900 text-white hover:from-purple-900 hover:to-[#9d4edd] transition-all w-12 h-12 rounded-full flex items-center justify-center shadow-md shadow-purple-500/20"
                   >
                     <FaLinkedinIn className="text-xl" />
                   </a>
@@ -102,13 +103,13 @@ export default function Contact() {
                     href="https://github.com/IP-04"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white text-[#2D3E50] hover:bg-[#3498DB] hover:text-white transition-colors w-12 h-12 rounded-full flex items-center justify-center"
+                    className="bg-gradient-to-br from-[#9d4edd] to-purple-900 text-white hover:from-purple-900 hover:to-[#9d4edd] transition-all w-12 h-12 rounded-full flex items-center justify-center shadow-md shadow-purple-500/20"
                   >
                     <FaGithub className="text-xl" />
                   </a>
                   <a
                     href="mailto:isaiasxl21@gmail.com"
-                    className="bg-white text-[#2D3E50] hover:bg-[#3498DB] hover:text-white transition-colors w-12 h-12 rounded-full flex items-center justify-center"
+                    className="bg-gradient-to-br from-[#9d4edd] to-purple-900 text-white hover:from-purple-900 hover:to-[#9d4edd] transition-all w-12 h-12 rounded-full flex items-center justify-center shadow-md shadow-purple-500/20"
                   >
                     <FaEnvelope className="text-xl" />
                   </a>
@@ -117,7 +118,7 @@ export default function Contact() {
 
               <div className="mt-10">
                 <Button
-                  className="bg-[#3498DB] hover:bg-[#3498DB]/90 text-white flex items-center"
+                  className="bg-[#9d4edd] hover:bg-[#9d4edd]/80 text-white flex items-center shadow-md shadow-purple-500/20"
                   onClick={handleDownload}
                 >
                   <svg
