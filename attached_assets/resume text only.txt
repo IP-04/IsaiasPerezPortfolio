@@ -1,0 +1,46 @@
+Isaias Perez
+isaiasxl21@gmail.com | linkedin.com/in/isaias-perez21 | github.com/IP-04
+Education
+University of Colorado Boulder
+Bachelor of Science in Computer Science Expected May 2027
+Double Minor: Business and Applied Mathematics
+Relevant Courses: Data Structures and Algorithms, Foundations of Object Oriented Programming, Computer Systems,
+Software Engineering Development Methods and Tools, Human Computer Interactions
+Technical Skills
+Languages: C/C++, Python, JavaScript, SQL, HTML/CSS
+Frameworks: React, Node.js, Flask, FastAPI, Express.js, Bootstrap
+Developer Tools: Git, Docker,Google Colab, Firebase, VS Code, Jupyter Notebooks
+Libraries: TensorFlow, Pytorch, OpenCV, ONNX, pandas, NumPy, Scikit-learn, Matplotlib
+Operating Systems: Windows, Linux, macOS
+Experience
+Undergraduate Machine Learning Research Assistant March 2025 – Present
+University of Colorado Boulder Boulder, CO
+• Conducting research on Large Language Model (LLM) interpretability and evaluation under PhD student Amit
+Kiran Rege
+• Designing structured tasks to assess model reasoning and decision-making processes
+• Exploring methods to reduce AI hallucinations and improve explainability in LLMs
+• Working with Hugging Face libraries and OpenAI models for NLP analysis
+Software Engineer Intern April 2023 – August 2023
+Ryno Industries LLC Erie, CO
+• Increased System Scalability for Equipment Orders by 27%
+• Reduced Data Retrieval Latency for Equipment Specifications by 12.3%
+• Improved usability and enhanced content related to conveying equipment
+Projects
+EcoVision | Python, OpenCV, TensorFlow, Flask, ONNX, FastAPI, Firebase, Next.js Hackathon Project
+• Developed a real-time item classification system utilizing machine learning, AMD Ryzen AI, and the YOLOv8
+model to identify whether an item is recyclable, trash, or belongs to another category
+• Optimized using ONNX quantization techniques for efficient deployment on AMD’s Neural Processing Unit (NPU)
+Machine Learning Fitness Tracker | Python, Pandas, Matplotlib, NumPy, Scikit-learn Personal Project
+• Created a fitness tracker using Python to process, visualize, and model accelerometer and gyroscope data
+• Implemented classification of barbell exercises and repetition counting using machine learning techniques
+BookHive | HTML, CSS, JavaScript, Node.js, Express.js, PostgreSQL, Docker Group Project
+• Developed a web-based book review application with a full-stack architecture
+• Integrated a user-friendly frontend, a backend API, and a PostgreSQL database, containerized using Docker
+Leadership Experience
+Society of Professional Hispanic Engineers (SHPE) September 2023 – Present
+Member University of Colorado Boulder
+• Enhanced group interactions and proposed new activities to foster engagement
+• Promoted cultural diversity within the group
+Additional Skills
+Natural Languages: Bilingual (Spanish-English), Spanish as first language
+Soft Skills:Cross-cultural Communication, Problem Solving,Team Leadership
