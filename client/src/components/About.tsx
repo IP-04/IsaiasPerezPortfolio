@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { FaGraduationCap, FaCode, FaBrain, FaLanguage, FaUsers } from "react-icons/fa";
 import { scrollToSection } from "@/lib/utils";
+import seniorPicture from "@/assets/senior_picture.jpg";
 
 export default function About() {
   const handleDownload = () => {

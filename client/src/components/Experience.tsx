@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { FaMicroscope, FaLaptopCode, FaUsers } from "react-icons/fa";
 import { Badge } from "@/components/ui/badge";
-import rynoLogo from "@/assets/RynoIndustriesLogo_PNG.png";
 
 export default function Experience() {
   const experiences = [
@@ -10,7 +9,7 @@ export default function Experience() {
       company: "University of Colorado Boulder",
       period: "March 2025 – Present",
       icon: <FaMicroscope />,
-      logo: null,
+      logo: "/attached_assets/CU-Boulder-Buffalo-logo.avif",
       responsibilities: [
         "Conducting research on Large Language Model (LLM) interpretability and evaluation under PhD student Amit Kiran Rege",
         "Designing structured tasks to assess model reasoning and decision-making processes",
@@ -24,7 +23,7 @@ export default function Experience() {
       company: "Ryno Industries LLC, Erie, CO",
       period: "April 2023 – August 2023",
       icon: <FaLaptopCode />,
-      logo: rynoLogo,
+      logo: "/attached_assets/RynoIndustriesLogo_PNG.png",
       responsibilities: [
         "Increased System Scalability for Equipment Orders by 27%",
         "Reduced Data Retrieval Latency for Equipment Specifications by 12.3%",
@@ -38,7 +37,7 @@ export default function Experience() {
       company: "University of Colorado Boulder",
       period: "September 2023 – Present",
       icon: <FaUsers />,
-      logo: null,
+      logo: "/attached_assets/SHPELeadingHispanicsinSTEM_Sticker1_530x@2x.webp",
       responsibilities: [
         "Enhanced group interactions and proposed new activities to foster engagement",
         "Promoted cultural diversity within the group",

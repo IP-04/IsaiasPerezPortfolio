@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="font-roboto text-text bg-[#F5F7FA]">
+    <div className="font-roboto text-white bg-black">
       <Navbar />
       <Hero />
       <About />
