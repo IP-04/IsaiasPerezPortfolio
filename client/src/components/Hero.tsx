@@ -58,7 +58,7 @@ export default function Hero() {
               Isaias Perez
             </h1>
             <h2 className="text-2xl md:text-3xl font-medium mb-6 text-gray-300 font-inter">
-              AI Engineer & Quantitative Researcher
+              AI Engineer & Machine Learning Researcher
             </h2>
             <p className="text-lg md:text-xl mb-8 max-w-xl text-gray-300">
               Building intelligent systems with LLMs and reinforcement learning. Currently conducting research on AI interpretability at CU Boulder while engineering automated solutions at Polylabs.

@@ -54,9 +54,11 @@ A professional portfolio website showcasing Isaias Perez's journey as an AI Engi
 
 ## User Preferences
 - **Visual Style**: Prefers dark themes with technical aesthetics
-- **Content Focus**: Emphasize AI/ML work and quantitative projects
+- **Content Focus**: Emphasize AI/ML work and machine learning research projects
 - **Professional Tone**: Academic and industry-focused presentation
 - **Technology Display**: Show cutting-edge tools and frameworks
+- **Privacy**: Do not display GPA on website
+- **Title Preference**: Machine Learning Researcher (not Quantitative Researcher)
 
 ## Deployment Notes
 - Static assets in `client/public/assets/`
