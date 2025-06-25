@@ -10,12 +10,32 @@ import {
   FaNodeJs,
   FaGitAlt,
   FaDocker,
-  FaDatabase
+  FaDatabase,
+  FaMicrochip,
+  FaChartLine,
+  FaBrain
 } from "react-icons/fa";
 import { 
   FaC
 } from "react-icons/fa6";
-import rynoLogo from "@/assets/RynoIndustriesLogo_PNG.png";
+import { 
+  SiOpenai, 
+  SiHuggingface, 
+  SiTensorflow, 
+  SiPytorch,
+  SiTypescript,
+  SiReact,
+  SiExpress,
+  SiFirebase,
+  SiSupabase,
+  SiStripe,
+  SiGooglecolab,
+  SiJupyter,
+  SiOpencv,
+  SiNumpy,
+  SiPandas,
+  SiScikitlearn
+} from "react-icons/si";
 
 export default function Skills() {
   const skills = [
@@ -26,6 +46,7 @@ export default function Skills() {
         { name: "C/C++", icon: <FaC className="text-blue-500" /> },
         { name: "Python", icon: <FaPython className="text-blue-600" /> },
         { name: "JavaScript", icon: <FaCode className="text-yellow-400" /> },
+        { name: "TypeScript", icon: <SiTypescript className="text-blue-400" /> },
         { name: "SQL", icon: <FaDatabase className="text-gray-300" /> },
         { name: "HTML/CSS", icon: <FaCode className="text-orange-500" /> },
       ],
@@ -34,12 +55,14 @@ export default function Skills() {
       category: "Frameworks",
       icon: <FaLayerGroup />,
       items: [
-        { name: "React", icon: <FaReact className="text-blue-400" /> },
+        { name: "React", icon: <SiReact className="text-blue-400" /> },
+        { name: "React Native", icon: <SiReact className="text-blue-500" /> },
         { name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
+        { name: "Express.js", icon: <SiExpress className="text-white" /> },
         { name: "Flask", icon: <FaPython className="text-gray-300" /> },
         { name: "FastAPI", icon: <FaPython className="text-green-400" /> },
-        { name: "Express.js", icon: <FaNodeJs className="text-white" /> },
         { name: "Bootstrap", icon: <FaCode className="text-purple-600" /> },
+        { name: "Expo", icon: <FaCode className="text-black" /> },
       ],
     },
     {
@@ -48,23 +71,48 @@ export default function Skills() {
       items: [
         { name: "Git", icon: <FaGitAlt className="text-orange-600" /> },
         { name: "Docker", icon: <FaDocker className="text-blue-500" /> },
-        { name: "Google Colab", icon: <FaCode className="text-yellow-500" /> },
-        { name: "Firebase", icon: <FaDatabase className="text-yellow-500" /> },
+        { name: "Google Colab", icon: <SiGooglecolab className="text-yellow-500" /> },
+        { name: "Firebase", icon: <SiFirebase className="text-yellow-500" /> },
+        { name: "Supabase", icon: <SiSupabase className="text-green-500" /> },
         { name: "VS Code", icon: <FaCode className="text-blue-500" /> },
-        { name: "Jupyter", icon: <FaCode className="text-orange-500" /> },
+        { name: "Jupyter", icon: <SiJupyter className="text-orange-500" /> },
       ],
     },
     {
-      category: "Libraries",
-      icon: <FaBook />,
+      category: "ML/AI Libraries",
+      icon: <FaMicrochip />,
       items: [
-        { name: "TensorFlow", icon: <FaCode className="text-orange-500" /> },
-        { name: "PyTorch", icon: <FaCode className="text-red-500" /> },
-        { name: "OpenCV", icon: <FaCode className="text-blue-600" /> },
+        { name: "TensorFlow", icon: <SiTensorflow className="text-orange-500" /> },
+        { name: "PyTorch", icon: <SiPytorch className="text-red-500" /> },
+        { name: "OpenCV", icon: <SiOpencv className="text-blue-600" /> },
         { name: "ONNX", icon: <FaCode className="text-white" /> },
-        { name: "pandas", icon: <FaPython className="text-blue-600" /> },
-        { name: "NumPy", icon: <FaPython className="text-blue-800" /> },
-        { name: "Scikit-learn", icon: <FaPython className="text-orange-600" /> },
+        { name: "pandas", icon: <SiPandas className="text-blue-600" /> },
+        { name: "NumPy", icon: <SiNumpy className="text-blue-800" /> },
+        { name: "Scikit-learn", icon: <SiScikitlearn className="text-orange-600" /> },
+        { name: "XGBoost", icon: <FaChartLine className="text-green-500" /> },
+        { name: "LSTM", icon: <FaMicrochip className="text-purple-500" /> },
+      ],
+    },
+    {
+      category: "APIs & Services",
+      icon: <FaLayerGroup />,
+      items: [
+        { name: "OpenAI", icon: <SiOpenai className="text-green-400" /> },
+        { name: "Gemini", icon: <FaCode className="text-blue-500" /> },
+        { name: "Stripe", icon: <SiStripe className="text-purple-500" /> },
+        { name: "Canvas LMS", icon: <FaCode className="text-orange-600" /> },
+        { name: "Hugging Face", icon: <SiHuggingface className="text-yellow-500" /> },
+      ],
+    },
+    {
+      category: "Quant Tools",
+      icon: <FaChartLine />,
+      items: [
+        { name: "pybind11", icon: <FaCode className="text-blue-400" /> },
+        { name: "Zarr", icon: <FaDatabase className="text-green-400" /> },
+        { name: "LOBSTER Data", icon: <FaChartLine className="text-red-500" /> },
+        { name: "Eigen", icon: <FaCode className="text-purple-400" /> },
+        { name: "SQLite", icon: <FaDatabase className="text-blue-300" /> },
       ],
     },
   ];
@@ -132,7 +180,7 @@ export default function Skills() {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6"
           variants={container}
           initial="hidden"
           whileInView="show"

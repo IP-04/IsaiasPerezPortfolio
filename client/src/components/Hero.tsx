@@ -1,15 +1,50 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope, FaRobot, FaBrain, FaCode } from "react-icons/fa";
+import { SiOpenai, SiPytorch, SiTensorflow } from "react-icons/si";
 import { scrollToSection } from "@/lib/utils";
+import ParticleBackground from "./ParticleBackground";
 
 export default function Hero() {
+  const floatingIcons = [
+    { icon: <SiOpenai className="text-green-400" />, delay: 0, x: "10%", y: "20%" },
+    { icon: <SiPytorch className="text-red-500" />, delay: 0.5, x: "85%", y: "30%" },
+    { icon: <SiTensorflow className="text-orange-500" />, delay: 1, x: "15%", y: "70%" },
+    { icon: <FaRobot className="text-blue-400" />, delay: 1.5, x: "80%", y: "75%" },
+    { icon: <FaBrain className="text-purple-400" />, delay: 2, x: "90%", y: "15%" },
+    { icon: <FaCode className="text-yellow-400" />, delay: 2.5, x: "5%", y: "50%" },
+  ];
+
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-black text-white"
+      className="min-h-screen flex items-center justify-center bg-black text-white relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-black to-black z-0"></div>
+      <ParticleBackground />
+      
+      {/* Floating AI Icons */}
+      {floatingIcons.map((item, index) => (
+        <motion.div
+          key={index}
+          className="absolute text-2xl opacity-20 z-5"
+          style={{ left: item.x, top: item.y }}
+          initial={{ opacity: 0, y: 20, scale: 0 }}
+          animate={{ 
+            opacity: [0.2, 0.4, 0.2], 
+            y: [-10, 10, -10],
+            scale: [0.8, 1.2, 0.8]
+          }}
+          transition={{
+            opacity: { repeat: Infinity, duration: 3, delay: item.delay },
+            y: { repeat: Infinity, duration: 4, delay: item.delay },
+            scale: { repeat: Infinity, duration: 2, delay: item.delay }
+          }}
+        >
+          {item.icon}
+        </motion.div>
+      ))}
+      
       <div className="container mx-auto px-6 py-24 md:py-32 relative z-10">
         <div className="flex flex-col md:flex-row items-center">
           <motion.div
@@ -23,12 +58,10 @@ export default function Hero() {
               Isaias Perez
             </h1>
             <h2 className="text-2xl md:text-3xl font-medium mb-6 text-gray-300 font-inter">
-              Computer Science Student & ML Researcher
+              AI Engineer & Quantitative Researcher
             </h2>
             <p className="text-lg md:text-xl mb-8 max-w-xl text-gray-300">
-              Aspiring software engineer and machine learning enthusiast with a
-              passion for creating innovative solutions at the University of
-              Colorado Boulder.
+              Building intelligent systems with LLMs and reinforcement learning. Currently conducting research on AI interpretability at CU Boulder while engineering automated solutions at Polylabs.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
               <Button
@@ -79,13 +112,23 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="rounded-full w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-[#9d4edd]/30 to-black border-4 border-[#9d4edd] shadow-xl shadow-purple-500/20 flex items-center justify-center overflow-hidden">
+            <motion.div 
+              className="rounded-full w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-[#9d4edd]/30 to-black border-4 border-[#9d4edd] shadow-xl shadow-purple-500/20 flex items-center justify-center overflow-hidden relative"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-br from-[#9d4edd]/20 to-transparent"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              />
               <img 
                 src="/assets/Senior Picture Isaias Perez.JPG" 
                 alt="Isaias Perez" 
-                className="w-full h-full object-cover" 
+                className="w-full h-full object-cover z-10 relative" 
               />
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-20" />
+            </motion.div>
           </motion.div>
         </div>
       </div>

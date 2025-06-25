@@ -1,36 +1,51 @@
 import { motion } from "framer-motion";
-import { FaMicroscope, FaLaptopCode, FaUsers } from "react-icons/fa";
+import { FaMicroscope, FaLaptopCode, FaUsers, FaRobot, FaBrain } from "react-icons/fa";
+import { SiOpenai } from "react-icons/si";
 import { Badge } from "@/components/ui/badge";
 
 export default function Experience() {
   const experiences = [
     {
+      title: "AI Engineer Intern",
+      company: "Polylabs",
+      period: "June 2025 – Present",
+      icon: <FaRobot />,
+      logo: null,
+      responsibilities: [
+        "Engineered intelligent systems to automate educational content delivery, boosting AI tool efficiency by 35% using LLMs and multimodal architectures",
+        "Designed and deployed pipelines for automated image-caption generation using OpenAI APIs, Hugging Face models, and n8n workflows",
+        "Built agent-based task frameworks that reduced manual content publishing time by 40%",
+        "Prototyped scalable backend services enabling autonomous scheduling, performance analytics, and user engagement optimization",
+      ],
+      tags: ["LLMs", "Multimodal AI", "OpenAI APIs", "n8n", "Agent Frameworks"],
+      isRemote: true,
+    },
+    {
       title: "Undergraduate Machine Learning Research Assistant",
       company: "University of Colorado Boulder",
       period: "March 2025 – Present",
-      icon: <FaMicroscope />,
+      icon: <FaBrain />,
       logo: "/assets/CU-Boulder-Buffalo-logo.avif",
       responsibilities: [
-        "Conducting research on Large Language Model (LLM) interpretability and evaluation under PhD student Amit Kiran Rege",
-        "Designing structured tasks to assess model reasoning and decision-making processes",
-        "Exploring methods to reduce AI hallucinations and improve explainability in LLMs",
-        "Working with Hugging Face libraries and OpenAI models for NLP analysis",
+        "Conducting research on LLM interpretability and hallucination reduction under PhD mentor Amit Kiran Rege",
+        "Designed evaluation tasks to probe model reasoning depth, token attribution, and consistency across prompts",
+        "Implemented diagnostic tools to visualize token contributions using transformers and attention analysis",
+        "Utilized Hugging Face and OpenAI libraries for model fine-tuning, inference, and behavior auditing",
       ],
-      tags: ["LLM Research", "NLP", "Hugging Face", "OpenAI"],
+      tags: ["LLM Interpretability", "Transformers", "Attention Analysis", "Model Fine-tuning"],
     },
     {
       title: "Software Engineer Intern",
-      company: "Ryno Industries LLC, Erie, CO",
+      company: "Ryno Industries LLC",
       period: "April 2023 – August 2023",
       icon: <FaLaptopCode />,
       logo: "/assets/RynoIndustriesLogo_PNG.png",
       responsibilities: [
-        "Increased System Scalability for Equipment Orders by 27%",
-        "Reduced Data Retrieval Latency for Equipment Specifications by 12.3%",
-        "Improved usability and enhanced content related to conveying equipment",
-        "Collaborated with cross-functional teams to implement system improvements",
+        "Boosted equipment ordering system scalability by 27% through modular API development and SQL schema redesign",
+        "Refactored backend data pipelines and indexing strategies to reduce equipment spec retrieval latency by 12.3%",
+        "Redesigned internal content delivery interface, improving usability and increasing engagement from the sales team by 18%",
       ],
-      tags: ["System Optimization", "Database Performance", "UI/UX Improvements"],
+      tags: ["API Development", "SQL Optimization", "Backend Architecture", "Performance Tuning"],
     },
     {
       title: "Member, Society of Professional Hispanic Engineers",
@@ -78,21 +93,34 @@ export default function Experience() {
                 <span className="text-white text-xs">{experience.icon}</span>
               </div>
               
-              <div className="bg-black border border-purple-900/50 rounded-lg shadow-md shadow-purple-500/10 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
+              <div className="bg-gradient-to-br from-black via-purple-900/5 to-black border border-purple-900/50 rounded-lg shadow-md shadow-purple-500/10 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 hover:border-purple-700/70 group">
                 <div className="flex flex-col md:flex-row justify-between mb-4">
                   <div className="flex items-start">
-                    {experience.logo && (
+                    {experience.logo ? (
                       <div className="mr-4 flex-shrink-0">
                         <img 
                           src={experience.logo} 
                           alt={experience.company} 
-                          className="w-12 h-auto object-contain"
+                          className="w-12 h-auto object-contain transition-transform duration-300 group-hover:scale-110"
                         />
+                      </div>
+                    ) : (
+                      <div className="mr-4 flex-shrink-0">
+                        <div className="w-12 h-12 bg-gradient-to-br from-[#9d4edd] to-purple-700 rounded-lg flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                          {experience.icon}
+                        </div>
                       </div>
                     )}
                     <div>
-                      <h3 className="text-xl font-semibold text-white font-inter">{experience.title}</h3>
-                      <p className="text-gray-400">{experience.company}</p>
+                      <h3 className="text-xl font-semibold text-white font-inter group-hover:text-purple-300 transition-colors duration-300">{experience.title}</h3>
+                      <div className="flex items-center gap-2">
+                        <p className="text-gray-400">{experience.company}</p>
+                        {experience.isRemote && (
+                          <Badge className="bg-green-900/30 text-green-400 border-green-700/50 text-xs">
+                            Remote
+                          </Badge>
+                        )}
+                      </div>
                     </div>
                   </div>
                   <p className="text-gray-400 mt-2 md:mt-0">{experience.period}</p>

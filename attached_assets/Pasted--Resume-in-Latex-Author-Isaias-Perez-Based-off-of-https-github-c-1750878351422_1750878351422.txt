@@ -1,0 +1,199 @@
+%-------------------------
+% Resume in Latex
+% Author: Isaias Perez
+% Based off of: https://github.com/sb2nov/resume
+% License: MIT
+%------------------------
+
+\documentclass[letterpaper,11 pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Isaias Perez} \\ \vspace{1pt}
+    \small \href{mailto:isaiasxl21@gmail.com}{\underline{isaiasxl21@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/isaias-perez21}{\underline{linkedin.com/in/isaias-perez21}} $|$
+    \href{https://isaias-perez-portfolio.onrender.com}{\underline{https://isaias-perez-portfolio.onrender.com}} $|$
+    \href{(720)-980-7488}{\underline{(720) 980-7488}}
+    
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {University of Colorado Boulder}{\textit{GPA (Major): 3.78}}
+    {Bachelor of Science in Computer Science}{Expected May 2027}
+\resumeSubHeadingListEnd
+\small{
+\textbf{Minors:} Applied Mathematics, Business \textbar{} 
+\textbf{Courses:} Data Structures, AI, OOP, Databases, Software Eng, Finance  
+\textbf{Affiliations:} Society of Hispanic Professional Engineers (SHPE)
+}
+ 
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {AI Engineer Intern}{June 2025 -- Present}
+      {Polylabs}{(Remote)}
+      \resumeItemListStart
+        \resumeItem{Engineered intelligent systems to automate educational content delivery, boosting AI tool efficiency by\textbf{ 35\%} using LLMs and multimodal architectures.}
+        \resumeItem{Designed and deployed pipelines for automated image-caption generation using OpenAI APIs, Hugging Face models, and n8n workflows.}
+        \resumeItem{Built agent-based task frameworks that reduced manual content publishing time by \textbf{40\%}.}
+        \resumeItem{Prototyped scalable backend services enabling autonomous scheduling, performance analytics, and user engagement optimization.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Undergraduate Machine Learning Research Assistant}{March 2025 -- Present}
+      {University of Colorado Boulder}{Boulder, CO}
+      \resumeItemListStart
+        \resumeItem{Conducting research on LLM interpretability and hallucination reduction under PhD mentor Amit Kiran Rege.}
+        \resumeItem{Designed evaluation tasks to probe model reasoning depth, token attribution, and consistency across prompts.}
+        \resumeItem{Implemented diagnostic tools to visualize token contributions using transformers and attention analysis.}
+        \resumeItem{Utilized Hugging Face and OpenAI libraries for model fine-tuning, inference, and behavior auditing.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineer Intern}{April 2023 -- August 2023}
+      {Ryno Industries LLC}{Erie, CO}
+      \resumeItemListStart
+        \resumeItem{Boosted equipment ordering system scalability by \textbf{27\%} through modular API development and SQL schema redesign.}
+        \resumeItem{Refactored backend data pipelines and indexing strategies to reduce equipment spec retrieval latency by \textbf{12.3\%}}
+        \resumeItem{Redesigned internal content delivery interface, improving usability and increasing engagement from the sales team by \textbf{18\%}.}
+      \resumeItemListEnd
+
+
+  \resumeSubHeadingListEnd
+  
+%-----------Technical Skills-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages:} C/C++, Python, JavaScript, SQL, HTML/CSS, TypeScript \\
+     \textbf{Frameworks:} React, Node.js, Flask, FastAPI, Express.js, Bootstrap, React Native, Expo \\
+     \textbf{Developer Tools:} Git, Docker, Google Colab, Firebase, Supabase, VS Code, Jupyter Notebooks \\
+     \textbf{Libraries:} TensorFlow, PyTorch, OpenCV, ONNX, Pandas, NumPy, Scikit-learn, XGBoost, LSTM \\
+     \textbf{APIs:} OpenAI, Gemini, Stripe, Canvas LMS \\
+     \textbf{Quant Tools:} pybind11, Zarr, LOBSTER Data, Eigen, SQLite \\
+     \textbf{Operating Systems:} Windows, Linux, macOS\\
+     \textbf{Other Skills:} Fluent in Spanish, Cross-cultural Communication, Team Leadership, Problem Solving
+    }}
+ \end{itemize}
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+        {\textbf{FlowExec++} $|$ \emph{Reinforcement Learning for Trade Execution}}{C++, PyTorch, RL, Gemini API}
+        \resumeItemListStart
+          \resumeItem{Built a market simulator with Heston stochastic volatility and market impact models in C++.}
+          \resumeItem{Trained PPO and Flow Matching agents for optimal execution; evaluated on LOBSTER replay data.}
+          \resumeItem{Integrated meta-strategy selection via XGBoost and LSTM; added Gemini-powered NLP dashboard.}
+        \resumeItemListEnd
+
+    \resumeProjectHeading
+        {\textbf{PulsePlan (AI Scheduler)} $|$ \emph{Multimodal LLM Agent for Task Automation}}{React Native, Node.js, OpenAI, Gemini}
+        \resumeItemListStart
+          \resumeItem{Built AI productivity planner using GPT-4o and Gemini for calendar, tasks, and habit tracking.}
+          \resumeItem{Created cross-platform web scraping engine for LMS integration (Canvas, Moodle).}
+          \resumeItem{Deployed Chrome extension with auto-sync and Stripe billing; full-stack authentication pipeline.}
+        \resumeItemListEnd
+
+    \resumeProjectHeading
+        {\textbf{EcoVision} $|$ \emph{Edge-AI for Smart Waste Sorting}}{Python, YOLOv8, ONNX, FastAPI}
+        \resumeItemListStart
+          \resumeItem{Engineered real-time waste classification system using YOLOv8 and custom labeled dataset.}
+          \resumeItem{Quantized and exported models to ONNX for NPU-accelerated inference on low-power edge devices.}
+        \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\end{document}

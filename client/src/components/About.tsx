@@ -47,9 +47,16 @@ export default function About() {
                 <h3 className="text-xl font-semibold font-inter text-white">Education</h3>
               </div>
               <div className="ml-9">
-                <p className="font-medium text-white">University of Colorado Boulder</p>
+                <div className="flex justify-between items-start mb-1">
+                  <p className="font-medium text-white">University of Colorado Boulder</p>
+                  <p className="text-[#9d4edd] font-semibold">GPA: 3.78</p>
+                </div>
                 <p className="text-gray-300">BS in Computer Science (Expected May 2027)</p>
-                <p className="text-sm text-gray-400">Double Minor: Business and Applied Mathematics</p>
+                <p className="text-sm text-gray-400 mb-2">Double Minor: Business and Applied Mathematics</p>
+                <div className="text-sm text-gray-400">
+                  <p><span className="text-white font-medium">Courses:</span> Data Structures, AI, OOP, Databases, Software Engineering, Finance</p>
+                  <p><span className="text-white font-medium">Affiliations:</span> Society of Hispanic Professional Engineers (SHPE)</p>
+                </div>
               </div>
             </div>
             
